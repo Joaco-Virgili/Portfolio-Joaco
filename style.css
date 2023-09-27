@@ -1,0 +1,186 @@
+html{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.158);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    #logo{
+        height: 110px;
+    }
+    #logo:hover{
+        cursor: pointer;
+        filter: opacity(.5);
+        transition: 100ms;
+    }
+    #redes{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    #redes a{
+        text-decoration: none;
+        color: black;
+    }
+    #redes a:hover{
+        cursor: pointer;
+        filter: opacity(.5);
+        transition: 100ms;
+    }
+}
+
+body{
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;;
+        padding-left: 50px;
+    }
+    #presentacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #presentacion p{
+        width: 50%;
+        padding-left: 50px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #presentacion img{
+        width: auto;    
+    }
+    #herramientas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+    }
+    .list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+    .list a{
+        text-decoration: none;
+        color: black;
+        font-size: larger;
+    }
+    
+    #botonFlotante {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}    
+/* Estilos para la ventana emergente */
+.ventanaEmergente {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif; /* Cambiamos la fuente */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos para los elementos dentro de la ventana emergente */
+.ventanaEmergente label, .ventanaEmergente input, .ventanaEmergente textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ventanaEmergente button {
+    margin-top: 10px;
+}
+
+.ventanaEmergente button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.ventanaEmergente button[type="submit"]:hover {
+    background-color: #007bff;
+}
+
+/* Fondo oscuro para cuando la ventana está abierta */
+.ventanaFondo {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para el botón de cierre */
+#cerrarVentana {
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #presentacion {
+        flex-direction: column;
+    }
+
+    #presentacion p {
+        width: 100%;
+        padding: 0;
+    }
+
+    #presentacion img {
+        width: 100%;
+    }
+
+    #herramientas {
+        padding: 20px;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #botonFlotante {
+        font-size: 14px;
+    }
+
+    .ventanaEmergente {
+        max-width: 100%;
+        width: 90%;
+    }
+}
